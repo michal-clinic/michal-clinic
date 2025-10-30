@@ -1,0 +1,123 @@
+:root {
+  --bg: #f2e9e1;
+  --card: #ffffff;
+  --text-dark: #3c2f2f;
+  --accent: #b85b4a;
+  --line: #d2c2b3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #f8f3ee, #f2e9e1);
+  color: var(--text-dark);
+  font-family: 'Assistant', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 5rem;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  animation-delay: 0.2s;
+}
+.title {
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.page {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--card);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.hero-image-wrapper {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.hero-image-wrapper img {
+  max-width: 240px;
+  border-radius: 0.5rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.hero-image-wrapper img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.contact-lines {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.contact-lines a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-lines a:hover {
+  text-decoration: underline;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.about p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.site-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6a6159;
+  margin-top: 2rem;
+}
+.site-footer .line {
+  height: 1px;
+  background: var(--line);
+  margin: 0 auto 1rem;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 1px;
+}
