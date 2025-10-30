@@ -19,26 +19,20 @@
 </div>
 
 <script>
-let fontSize = 100;
-let highContrast = false;
-
 function increaseFont() {
-fontSize += 10;
-document.body.style.fontSize = fontSize + '%';
+const html = document.documentElement;
+let currentSize = parseFloat(window.getComputedStyle(html).fontSize);
+html.style.fontSize = (currentSize * 1.1) + 'px';
 }
 
 function decreaseFont() {
-fontSize = Math.max(80, fontSize - 10);
-document.body.style.fontSize = fontSize + '%';
+const html = document.documentElement;
+let currentSize = parseFloat(window.getComputedStyle(html).fontSize);
+html.style.fontSize = (currentSize * 0.9) + 'px';
 }
 
 function toggleContrast() {
-highContrast = !highContrast;
-if (highContrast) {
-document.body.classList.add('high-contrast');
-} else {
-document.body.classList.remove('high-contrast');
-}
+document.body.classList.toggle('high-contrast');
 }
 </script>
 
