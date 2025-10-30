@@ -12,6 +12,35 @@
 </head>
 <body>
   <main class="page fade-in" id="main">
+    <div id="accessibility-menu">
+<button onclick="increaseFont()">A+</button>
+<button onclick="decreaseFont()">A−</button>
+<button onclick="toggleContrast()">🌓</button>
+</div>
+
+<script>
+let fontSize = 100;
+let highContrast = false;
+
+function increaseFont() {
+fontSize += 10;
+document.body.style.fontSize = fontSize + '%';
+}
+
+function decreaseFont() {
+fontSize = Math.max(80, fontSize - 10);
+document.body.style.fontSize = fontSize + '%';
+}
+
+function toggleContrast() {
+highContrast = !highContrast;
+if (highContrast) {
+document.body.classList.add('high-contrast');
+} else {
+document.body.classList.remove('high-contrast');
+}
+}
+</script>
 
     <header class="site-header">
       <div class="title">מיכל בלנק - רפואה סינית</div>
