@@ -77,6 +77,14 @@ color: #fff !important;
   font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
   font-weight: 600;
   letter-spacing: -0.03em;
+    font-family: 'Nunito', 'Assistant', 'PingFang SC', sans-serif;
+  font-weight: 600;
+  font-family: 'Poppins', 'PingFang SC', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
 }
 .subtitle {
   font-size: 1.1rem;
